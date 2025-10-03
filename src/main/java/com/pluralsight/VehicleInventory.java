@@ -66,6 +66,10 @@ public class VehicleInventory {
     }
 
     private static void addVehicle() {
+        if (count >= 20){
+            System.out.println("Inventory is full! Cannot add anymore cars");
+            return;
+        }
         sc.nextLine();
         System.out.println("Enter the Vehicle ID:");
         long vehicleId = Long.parseLong(sc.nextLine());
@@ -94,7 +98,7 @@ public class VehicleInventory {
         String color = sc.nextLine(); // Capture user input
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < count; i++){
-            if (vehicles[i].getColor().equalsIgnoreCase(color)){
+            if (vehicles[i].getColor().toLowerCase().contains(color.toLowerCase())){
                 result.append("\n").append(vehicles[i].toString());
                 notFound = false;
             }
@@ -130,7 +134,7 @@ public class VehicleInventory {
         String makeModel = sc.nextLine(); // Capture user input
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < count; i++){
-            if (vehicles[i].getMakeModel().equalsIgnoreCase(makeModel)){
+            if (vehicles[i].getMakeModel().toLowerCase().contains(makeModel.toLowerCase())){
                 result.append("\n").append(vehicles[i].toString());
                 notFound = false;
             }
