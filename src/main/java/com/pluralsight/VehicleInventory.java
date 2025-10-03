@@ -24,7 +24,10 @@ public class VehicleInventory {
                 case 4 -> searchByColor();
                 case 5 -> addVehicle();
                 case 6 -> System.out.println("Vehicle Inventory Program quitting...");
-
+                default -> {
+                    System.out.println("Invalid option selected. Program exiting.");
+                    System.exit(0);
+                }
             }
         }
 
