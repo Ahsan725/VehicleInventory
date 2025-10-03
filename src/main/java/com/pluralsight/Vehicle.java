@@ -63,7 +63,7 @@ public class Vehicle {
         String border = "------------------------------------------";
 
         return
-                "| VEHICLE ID:   " + this.vehicleId +
+                "\n| VEHICLE ID:   " + this.vehicleId +
                 "\n| MAKE/MODEL:   " + this.makeModel +
                 "\n| COLOR:        " + this.color +
                 "\n| ODOMETER:     " + this.odometerReading + " miles" +
